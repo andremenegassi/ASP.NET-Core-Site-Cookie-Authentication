@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css {
+
+    <link href="~/css/Views/Home/Index.css" rel="stylesheet" />
+}
+
+    <h1 class="vermelho">Index</h1>
+
+    @{
+        string aux = "Hello World";
+        <div class="azul">
+            @aux
+        </div>
+    }
+
+    <ul>
+        @for (int i = 0; i <= 10; i++)
+        {
+            <li>5 x @i = @(5 * i)</li>
+
+        }
+    </ul>
+
+
+

@@ -1,0 +1,45 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 150px;
+    width: 100%;
+    background-color: green;
+    color: #fff;
+}
+
+.footer {
+    height: 100px;
+    width: 100%;
+    color: #fff;
+    background-color: green;
+}
+
+.vermelho {
+    color:red;
+}
+
+.disable {
+   opacity: 0.5;
+   pointer-events:none;
+}
+
+
+.divLoading {
+
+    background:rgba(128, 128, 128, 0.9);
+    position:fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.divLoading img {
+    width: 150px;
+}

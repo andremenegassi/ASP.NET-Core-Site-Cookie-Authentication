@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Autenticação</h1>
+
+@section js {
+    <script src="~/js/Views/Autenticacao/Index.js"></script>
+}
+
+
+<form>
+    <div>
+        <label>E-mail</label>
+        <input type="email" name="email" id="email" value="@ViewBag.Email" />
+    </div>
+
+    <div>
+        <label>Senha</label>
+        <input type="password" name="senha" id="senha" />
+    </div>
+
+    <div>
+        <input type="button" value="ENTRAR" id="entrar"  />
+        <img style="display:none" id="imgLoading" src="~/imagens/loadingImage.gif" />
+    </div>
+
+    <div id="divMsg"></div>
+
+
+</form>

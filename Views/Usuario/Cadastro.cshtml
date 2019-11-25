@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewData["Title"] = "Cadastro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <form class="offset-md-3 col-md-6 text-center mt-3">
+            <h1>Cadastro de Usuário</h1>
+            <div class="form-group">
+                <label for="iNome">Nome</label>
+                <input type="text" class="form-control"
+                       id="iNome" placeholder="Digite seu nome"
+                       data-validation-required="requerido"
+                       data-validation-summary="divMsgINome"/>
+                <div id="divMsgINome"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="iEmail">E-mail</label>
+                <input type="email" class="form-control"
+                       id="iEmail" placeholder="Digite seu e-mail"
+                       data-validation-required="requerido"
+                       data-validation-email="e-mail inválido"
+                       data-validation-summary="divMsgIEmail" />
+                <div id="divMsgIEmail"></div>
+            </div>
+            <div class="form-group">
+                <label for="iSenha">Senha</label>
+                <input type="password" class="form-control"
+                       id="iSenha" placeholder="Password"
+                       data-validation-required="requerido"
+                       data-validation-summary="divMsgISenha">
+                <div id="divMsgISenha"></div>
+
+            </div>
+            <div class="form-group">
+                <label for="iFoto">Foto</label>
+                <input type="file" class="form-control" id="iFoto">
+            </div>
+
+
+            <button type="button" id="btnCadastrar" class="btn btn-primary">Cadastrar</button>
+            <div id="divMsg" class="invisible">
+                <div class="alert alert-primary alert-dismissible fade show mt-2" role="alert">
+                    <strong>Atenção!</strong> <div id="msgTexto"></div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+<link href="~/lib/form-validation/validation.css" rel="stylesheet" />
+@section js {
+    <script src="~/js/Views/Usuario/Cadastro.js"></script>
+    <script src="~/lib/form-validation/validation.js"></script>
+}
+
+

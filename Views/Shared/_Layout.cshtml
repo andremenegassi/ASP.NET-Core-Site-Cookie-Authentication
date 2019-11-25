@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/css/Layout.css" rel="stylesheet" />
+    @RenderSection("css", false)
+
+</head>
+<body>
+
+    <header class="header">
+        <img style="width: 200px"
+             src="~/imagens/logo.jpg" />
+    </header>
+
+    <content>
+        @RenderBody()
+    </content>
+
+    <footer class="footer">
+        Direitos reservados ao site.
+    </footer>
+
+    @Html.Partial("_Loading.cshtml")
+
+
+</body>
+@RenderSection("js", false)
+</html>

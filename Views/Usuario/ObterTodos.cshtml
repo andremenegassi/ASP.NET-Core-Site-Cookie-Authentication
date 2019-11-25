@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Listar usuários";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <ul>
+        @{
+
+            var lista =
+                (List<HelloWorld.Models.Usuario>)ViewBag.Usuarios;
+
+
+            foreach (var usuario in lista)
+            {
+                <li>
+                    <div>
+                        <img src="/usuario/obterfoto/@usuario.Id" />
+                    </div>
+                    <div>
+                        <div>
+                            @usuario.Nome
+                        </div>
+                        <div>
+                            @usuario.Email
+                        </div>
+                    </div>
+                </li>
+                
+            }
+
+        }
+    </ul>
+    
+
+</div>
